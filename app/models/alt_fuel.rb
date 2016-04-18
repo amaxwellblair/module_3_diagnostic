@@ -7,7 +7,8 @@ class AltFuel < OpenStruct
 
   def self.find_by(args)
     zip = args[:zip]
-    json = service.alternate_fuel(zip)
+    distance = args[:distance]
+    json = service.alternate_fuel(zip, distance)
     stations = json[:fuel_stations]
     stations = stations.map do |station|
       AltFuel.new(station)

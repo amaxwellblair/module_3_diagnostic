@@ -8,13 +8,11 @@ RSpec.feature "user can find alt fuel" do
       click_on "Locate"
 
       expect(current_path).to eq("/search")
-
-      expect(page).to have_content "Name: First one"
-      expect(page).to have_content "Address: Somewhere lane"
-      expect(page).to have_content "Fuel type: Grease"
-      expect(page).to have_content "Distance: 1 mile"
-      expect(page).to have_content "Access Times: 10pm"
-      save_and_open_page
+      expect(page).to have_content "Name: UDR"
+      expect(page).to have_content "Address: 800 Acoma St Denver, CO"
+      expect(page).to have_content "Fuel type: ELEC"
+      expect(page).to have_content "Distance: 0.3117 miles"
+      expect(page).to have_content "Access Times: 24 hours daily"
     end
   end
 end
