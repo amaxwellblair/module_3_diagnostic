@@ -8,6 +8,13 @@ class NrelService
 
   def alternate_fuel(zip_code)
     response = connection.get("/nrel/alt-fuel-stations/v1/nearest.json?location=#{zip_code}")
+    parse(response)
   end
+
+  private
+
+    def parse(response)
+      JSON.parse(response.body, symbolize_names: true)
+    end
 
 end

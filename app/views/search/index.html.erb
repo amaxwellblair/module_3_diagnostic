@@ -1,4 +1,13 @@
 <% @searches.each do |search| %>
-  <p><%= search.name %></p>
+  <%= binding.pry %>
+  <p>Name: <%= search.station_name %></p>
+  <p>Fuel type: <%= search.fuel_type_code %></p>
+  <p>Distance: <%= search.distance %></p>
+  <p>Access Times: <%= search.access_days_time %></p>
   <br>
 <% end %>
+<!--
+expect(page).to have_content "Address: Somewhere lane"
+expect(page).to have_content "Fuel type: Grease"
+expect(page).to have_content "Distance: 1 mile"
+expect(page).to have_content "Access Times: 10pm" -->

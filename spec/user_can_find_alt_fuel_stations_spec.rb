@@ -14,6 +14,7 @@ RSpec.feature "user can find alt fuel" do
       expect(page).to have_content "Fuel type: Grease"
       expect(page).to have_content "Distance: 1 mile"
       expect(page).to have_content "Access Times: 10pm"
+      save_and_open_page
     end
   end
 end
